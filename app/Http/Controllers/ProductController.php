@@ -18,7 +18,7 @@ class ProductController extends Controller
         $products = Product::with('category')->get();
 
         if (Auth::user()->role->name=='User'){
-            return view('Product.card', ['products' => $products]);
+            return view('product.card', ['products' => $products]);
         } else {
             return view('product.index', ['products' => $products]);
         }

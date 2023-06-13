@@ -13,6 +13,7 @@
         
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset("css/style.css")}}" rel="stylesheet" />
+        
     </head>
     <body>
         <!-- Navigation-->
