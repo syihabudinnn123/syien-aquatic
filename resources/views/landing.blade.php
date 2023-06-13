@@ -83,10 +83,10 @@
     </div>
     <!-- Section-->
       <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
+        <div class="container px-4 px-lg-5" style="margin-top: -80px;">
             <form action="{{ route('landing') }}" method="GET">
                     @csrf
-                    <div class="row g-3 my-5">
+                    <div class="row g-3 my-5" style="margin-top: -40px;">
                         <div class="col-sm-3">
                             <input type="text" class="form-control" placeholder="Min" name="min" value="{{ old('min') }}">
                         </div>
