@@ -17,7 +17,7 @@
         <link href="{{ asset("css/style.css")}}" rel="stylesheet" />
         
     </head>
-    <body>
+    <body style="background-image: url('{{asset('css/bg.jpg')}}');">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
             <div class="container px-4 px-lg-5">

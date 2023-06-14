@@ -11,7 +11,7 @@
         <link href="{{ asset("css/styles.css")}}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="sb-nav-fixed">
+    <body class="sb-nav-fixed" style="background-image: url('{{asset('css/bg.jpg')}}');">
         
             <!-- Navbar-->
             @include('includes.navbar')
