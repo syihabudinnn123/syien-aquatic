@@ -71,10 +71,10 @@
                     aria-current="{{ $loop->first ? 'true' : '' }}" aria-label="Slide 1"></button>
             @endforeach
         </div>
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="height: 300px; overflow:hidden;">
             @foreach ($sliders as $slider)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}" data-bs-interval="3000">
-                    <img src="{{ asset('storage/slider/' . $slider->image) }}" class="d-block w-100" alt="{{ $slider->image }}">
+                    <img src="{{ asset('storage/slider/' . $slider->image) }}" class="d-block w-100" alt="{{ $slider->image }}" style="height: 400px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>{{ $slider->title }}</h5>
                         <p>{{ $slider->caption }}</p>
