@@ -10,10 +10,12 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ asset('css/style.css')}}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+        
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ asset("css/style.css")}}" rel="stylesheet" />
+        
     </head>
     <body>
         <!-- Navigation-->
@@ -44,19 +46,10 @@
                             Cart
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
-                    @auth
-                        <a href="{{ route('dashboard') }}" class="btn btn-outline-dark ms-1">
-                            <i class="bi-person-fill me-1"></i>
-                            Dashboard
-                        </a>
-                    @endauth
-
-                    @guest
-                        <a href="{{ route('login') }}" class="btn btn-outline-dark ms-1">
+                        <a class="btn btn-outline-dark ms-1" type="" href="{{ route('login')}}">
                             <i class="bi-person-fill me-1"></i>
                             Login
-                        </a>
-                    @endguest
+                            <!-- <span class="badge bg-dark text-white ms-1 rounded-pill"></span> -->
                         </a>
                     </form>
                 </div>
@@ -160,6 +153,7 @@
         <!-- Section-->
         
         <!-- Footer-->
+      
   <!-- Footer -->
   <footer
           class="text-center text-lg-start text-white"
@@ -177,7 +171,7 @@
               Syien Aquatic
             </h6>
             <p>
-              Syien Aquatic merupakan toko online berbasis web yang menyediakan berbagai jenis ikan, peralatan aquascape, bonsai dan aksesoris aquascape lainnya. Silahkan ceckout produk kami dan dapatkan diskonnya sekarang juga
+              Syien Aquatic merupakan toko online berbasis web yang menyediakan berbagai jenis ikan, peralatan aquascape, bonsai dan aksesoris aquascape lainnya. Silahkan ceckout produk kami dan dapatkan diskonnya sekarang juga.
             </p>
           </div>
           <!-- Grid column -->
@@ -187,18 +181,11 @@
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            @foreach ( $products as $prod)    
             <p>
-              <a class="text-white">MDBootstrap</a>
+              <a class="text-white" href="{{ route('landing', ['products' => $prod->name])}}">{{ $prod->name}}</a>
             </p>
-            <p>
-              <a class="text-white">MDWordPress</a>
-            </p>
-            <p>
-              <a class="text-white">BrandFlow</a>
-            </p>
-            <p>
-              <a class="text-white">Bootstrap Angular</a>
-            </p>
+            @endforeach
           </div>
           <!-- Grid column -->
 
@@ -210,11 +197,10 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> Kudus, Jawa Tengah</p>
+            <p><i class="fas fa-home mr-3"></i> Kudus, Jawa Tengah, Indonesia</p>
             <p><i class="fas fa-envelope mr-3"></i> syihabudinnn@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> 089504522619</p>
-            <p><i class="fas fa-phone mr-3"></i> 089504522619</p>
-
+            <p><i class="fas fa-phone mr-3"></i> +62 89504522619</p>
+            <p><i class="fas fa-phone mr-3"></i> +62 89504522619</p>
           </div>
           <!-- Grid column -->
 
@@ -247,13 +233,13 @@
                href="https://www.facebook.com/syihabudin.qudusiy"
                role="button"
                ><i class="fab fa-google"></i
-              ></a>            
+              ></a>
 
             <!-- Instagram -->
             <a
                class="btn btn-primary btn-floating m-1"
                style="background-color: #ac2bac"
-               href="www.instagram.com/syihabudin.nafi"
+               href="https://www.instagram.com/syihabudin.nafi/"
                role="button"
                ><i class="fab fa-instagram"></i
               ></a>
