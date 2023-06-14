@@ -41,22 +41,22 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-light active bg-secondary" type="submit">
+                        <button class="btn btn-outline-light active bg-secondary text-white" type="submit">
                             <i class="bi-cart-fill me-1 text-white"></i>
-                            <label href="#!" class="text-white">Cart</label>
+                            Cart
                             <span class="badge bg-black text-white ms-1 rounded-pill">0</span>
                         </button>
                         @auth
-                        <a href="{{ route('dashboard') }}" class="btn btn-outline-light ms-1 active bg-secondary">
+                        <a href="{{ route('dashboard') }}" class="btn btn-outline-light text-white ms-1 active bg-secondary">
                             <i class="bi-person-fill me-1 text-white"></i>
-                            <label for="" class="text-white">Dashboard</label>
+                            Dashboard
                         </a>
                     @endauth
 
                     @guest
-                        <a href="{{ route('login') }}" class="btn btn-outline-light ms-1 bg-secondary active">
+                        <a href="{{ route('login') }}" class="btn text-white btn-outline-light ms-1 bg-secondary active">
                             <i class="bi-person-fill me-1 text-white"></i>
-                            <label for="" class="text-white">Login</label>
+                            Login
                         </a>
                     @endguest
                     </form>
