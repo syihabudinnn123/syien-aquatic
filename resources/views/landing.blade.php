@@ -119,7 +119,7 @@
                             @endif
 
                             <!-- Product image-->
-                            <img class="card-img-top" src="{{ asset('storage/product/' . $product->image) }}" alt="{{ $product->name }}" style="overflow: hidden;" />
+                            <div style="height: 200px; width:auto; overflow:hidden;"><img class="card-img-top" src="{{ asset('storage/product/' . $product->image) }}" alt="{{ $product->name }}" style="height: 230px; width:auto;"/></div>
 
                             <!-- Product details-->
                             <div class="card-body p-4">
