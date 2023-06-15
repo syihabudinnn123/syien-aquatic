@@ -64,7 +64,7 @@
             </div>
         </nav>
         <!-- Carousels -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="padding-top: 30px;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="padding-top: 50px;">
             <div class="carousel-indicators">
                 @foreach ($sliders as $slider)
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $loop->iteration - 1 }}" class="{{ $loop->first ? 'active' : '' }}"
