@@ -73,7 +73,7 @@
         </div>
         <div class="carousel-inner">
             @foreach ($sliders as $slider)
-                <div class="carousel-item {{ $loop->first ? 'active' : '' }}" data-bs-interval="3000" style="height: 300px;">
+                <div class="carousel-item {{ $loop->first ? 'active' : '' }}" data-bs-interval="3000">
                     <img src="{{ asset('storage/slider/' . $slider->image) }}" class="d-block w-100" alt="{{ $slider->image }}">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>{{ $slider->title }}</h5>
