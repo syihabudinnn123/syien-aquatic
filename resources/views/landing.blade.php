@@ -19,7 +19,7 @@
     </head>
     <body style="background-image: url('{{asset('css/bg.jpg')}}');">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="position: fixed; z-index:9999; width:100%;">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#!">Syien Aquatic</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -65,31 +65,31 @@
         </nav>
         <!-- Carousels -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            @foreach ($sliders as $slider)
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $loop->iteration - 1 }}" class="{{ $loop->first ? 'active' : '' }}"
-                    aria-current="{{ $loop->first ? 'true' : '' }}" aria-label="Slide 1"></button>
-            @endforeach
-        </div>
-        <div class="carousel-inner">
-            @foreach ($sliders as $slider)
-                <div class="carousel-item {{ $loop->first ? 'active' : '' }}" data-bs-interval="3000">
-                    <img src="{{ asset('storage/slider/' . $slider->image) }}" class="d-block w-100" alt="{{ $slider->image }}">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>{{ $slider->title }}</h5>
-                        <p>{{ $slider->caption }}</p>
+            <div class="carousel-indicators">
+                @foreach ($sliders as $slider)
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $loop->iteration - 1 }}" class="{{ $loop->first ? 'active' : '' }}"
+                        aria-current="{{ $loop->first ? 'true' : '' }}" aria-label="Slide 1"></button>
+                @endforeach
+            </div>
+            <div class="carousel-inner">
+                @foreach ($sliders as $slider)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}" data-bs-interval="3000">
+                        <img src="{{ asset('storage/slider/' . $slider->image) }}" class="d-block w-100" alt="{{ $slider->image }}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{ $slider->title }}</h5>
+                            <p>{{ $slider->caption }}</p>
+                        </div>
                     </div>
-                </div>
-            @endforeach
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+                @endforeach
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
     </div>
     <!-- Section-->
       <section class="py-5">
